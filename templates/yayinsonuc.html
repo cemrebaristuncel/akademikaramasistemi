@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yayın Arama Sonuçları</title>
+    <style>
+        body {
+            background-color: rgb(163, 219, 73);
+        }
+    </style>
+</head>
+<body>
+    <h2>İlgili Yayına Ait Bilgiler</h2> <br>
+    <div><h3>Bu Yayının Yazarı/Yazarları</h3>
+        {% for x in sonuclar %}
+        <p><a href="{{url_for('yazarara', type=x['Yazar adı'])}}">{{x['Yazar adı']}}</a></p>
+        {% endfor %}
+        <br>
+        <h3>Bu yayının diğer bilgileri</h3>
+        <p><strong>Yayın Türü:</strong> {{b}} <strong>Yayın Yılı:</strong> {{c}}</p>
+    </div>    
+    
+
+      
+</body>
+</html>

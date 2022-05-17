@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arama Arayüzü</title>
+    <style>
+        body {
+            background-color: rgb(163, 219, 73);
+        }
+        .container {
+            margin-top: 250px;
+            margin-left: 550px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container"><form action="/yazarara" method="post">
+        <p>Arama yapılacak yazarın adı:</p>
+        <input type="text" name="aratilanyazaradi" placeholder="Yazar adı giriniz"></input><br>
+        <button type="submit" name="submit" value="submit">Yazar Adına Göre Arama Yap</button>
+    </form>
+    <br>
+    <form action="/yayinara" method="post">
+        <p>Arama yapılacak yayının adı:</p>
+        <input type="text" name="aratilanyayinadi" placeholder="Yayın adı giriniz"></input><br>
+        <button type="submit" name="submit" value="submit">Yayın Adına Göre Arama Yap</button>
+    </form>
+    </div>
+
+
+</body>
+</html>

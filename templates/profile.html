@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+          background-color: rgb(163, 219, 73);
+      }
+      .container {
+        margin-top: 75px;
+        margin-left: 350px;
+      }
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class = "arastirmaciekle">
+        <form action="/ekle" method="POST" style="float: left;" enctype="multipart/form-data">
+        <p>Araştırmacı ID: </p><br>
+        <input type="text" name="yazarid"></input><br>
+        <p>Araştırmacı Adı-Soyadı: </p><br>
+        <input type="text" name="yazaradi"></input><br>
+        <button type="submit" name="submit" value="submit">Araştırmacı Ekle</button>
+        </form>
+      </div>
+      <div class = "yayinekle" style="float: left; margin-left: 50px;">
+        <form action="/ekle" method="POST" enctype="multipart/form-data">
+        <p>Araştırmacı Adı-Soyadı</p><br>
+        <input type="text" name="yazaradi"></input><br> 
+        <p>Yayın ID</p><br>
+        <input type="text" name="yayinid"></input><br>
+        <p>Yayın Adı</p><br>
+        <input type="text" name="yayinadi"></input><br>
+        <p>Yayın Yılı</p><br>
+        <input type="text" name="yayinyili"></input><br>
+        <button type="submit" name="submit" value="submit1">Yayın Ekle</button>
+        </form>
+      </div>
+      <div class = "turekle" style="float: left; margin-left: 50px;">
+        <form action="/ekle" method="POST" enctype="multipart/form-data">
+        <p>Yayın ID</p><br>
+        <input type="text" name="yayinid"></input><br> 
+        <p>Yayın Türü</p><br>
+        <input type="text" name="yayinturu"></input><br>
+        <p>Yayın Yeri</p><br>
+        <input type="text" name="yayinyeri"></input><br>
+        <button type="submit" name="submit" value="submit2">Tür Ekle</button>
+        </form>
+      </div>
+
+    </div>
+    
+    
+  
+  </body>
+</html>

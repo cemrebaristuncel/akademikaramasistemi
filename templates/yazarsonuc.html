@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazar Arama Sonucu</title>
+    <style>
+        body {
+            background-color: rgb(163, 219, 73);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div><h2>2020 ve Sonrası</h2>
+        {% for x in sonuclar %}
+            {% if x['Yayın Yılı'] > 2019 %}
+               <p><strong>Yayın adı:</strong> <a href="{{url_for('yayinara', type=x['Yayın adı'])}}">{{x['Yayın adı']}}</a> <strong>Yayın Yılı:</strong> {{x['Yayın Yılı']}}</p>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div><h2>2010-2019</h2>
+            {% for x in sonuclar %}
+            {% if x['Yayın Yılı'] > 2009 and x['Yayın Yılı'] < 2020 %}
+               <p><strong>Yayın adı:</strong> <a href="{{url_for('yayinara', type=x['Yayın adı'])}}">{{x['Yayın adı']}}</a> <strong>Yayın Yılı:</strong> {{x['Yayın Yılı']}}</p>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div><h2>2000-2009</h2>
+            {% for x in sonuclar %}
+            {% if x['Yayın Yılı'] > 1999 and x['Yayın Yılı'] < 2010  %}
+               <p><strong>Yayın adı:</strong> <a href="{{url_for('yayinara', type=x['Yayın adı'])}}">{{x['Yayın adı']}}</a> <strong>Yayın Yılı:</strong> {{x['Yayın Yılı']}}</p>
+            {% endif %}
+        {% endfor %}
+        </div>
+</div>
+    
+    
+</body>
+</html>
